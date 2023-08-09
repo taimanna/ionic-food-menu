@@ -1,0 +1,38 @@
+<ion-content [fullscreen]="true">
+  <div>
+    <h1>Food Menu</h1>
+
+    <ion-grid>
+      <ion-row>
+        <ion-col size="4">
+          <img src="../../assets/images/all.png" />
+          <h4>All</h4>
+        </ion-col>
+
+        <ion-col size="4">
+          <img src="../../assets/images/fastfood.png" />
+          <h4>Fast Food</h4>
+        </ion-col>
+
+        <ion-col size="4">
+          <img src="../../assets/images/seafood.png" />
+          <h4>Seafood</h4>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+  <div>
+    <h2>Popular</h2>
+
+    <ion-grid fixed>
+      <ion-row class="ion-align-items-start">
+        <ion-col *ngFor="let food of popular" size="6">
+          <img src={{food.image}} />
+          <h2>{{food.name}}</h2>
+          <h3><sup>$</sup>{{food.price}}</h3>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>
