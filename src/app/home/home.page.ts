@@ -6,8 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-  menu: any;
-  popular: any;
+  menu: any[] = [];
   public category: string = '';
 
   constructor() {}
@@ -17,7 +16,6 @@ export class HomePage {
       .then((res) => res.json())
       .then((json) => {
         this.menu = json;
-        this.popular = json.splice(0, 4);
       });
   }
 }

@@ -1,6 +1,6 @@
 <ion-content [fullscreen]="true">
   <div>
-    <h1>Food Menu</h1>
+    <h1 class="ion-padding">Food Menu</h1>
 
     <ion-grid>
       <ion-row>
@@ -29,16 +29,29 @@
   </div>
 
   <div>
-    <h2>Popular</h2>
+    <h2 class="ion-padding">Popular</h2>
 
     <ion-grid>
       <ion-row class="ion-justify-content-center">
-        <ion-col *ngFor="let food of popular" size="5.5">
-          <img src={{food.image}} />
-          <h2>{{food.name}}</h2>
-          <h3><sup>$</sup>{{food.price}}</h3>
+        <ion-col class="ion-margin" *ngFor="let food of menu.slice(0,2)">
+          <a routerLink="/detail/{{food.id}}">
+            <img src={{food.image}} />
+            <h2>{{food.name}}</h2>
+            <h3><sup>$</sup>{{food.price}}</h3>
+          </a>
+        </ion-col>
+      </ion-row>
+
+      <ion-row class="ion-justify-content-center">
+        <ion-col class="ion-margin" *ngFor="let food of menu.slice(2,4)">
+          <a routerLink="/detail/{{food.id}}">
+            <img src={{food.image}} />
+            <h2>{{food.name}}</h2>
+            <h3><sup>$</sup>{{food.price}}</h3>
+          </a>
         </ion-col>
       </ion-row>
     </ion-grid>
+
   </div>
 </ion-content>

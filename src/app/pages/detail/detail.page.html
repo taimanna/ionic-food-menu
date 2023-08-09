@@ -1,0 +1,35 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="detail-container ion-padding">
+    <img src="{{foodDetail.image}}" alt="oishii foodo">
+
+
+    <div class="name-price">
+      <h1>{{foodDetail.name}}</h1>
+      <h1><sup>$</sup>{{foodDetail.price}}</h1>
+    </div>
+
+    <div class="button-group">
+      <ion-button>
+        <ion-icon name="timer-outline"></ion-icon>{{foodDetail.deliveryTime}}
+      </ion-button>
+      <ion-button>
+        <ion-icon name="star-outline"></ion-icon>{{foodDetail.rating}}
+      </ion-button>
+    </div>
+
+    <div>
+      <h1>About</h1>
+      <p>{{foodDetail.description}}</p>
+    </div>
+  </div>
+
+
+</ion-content>

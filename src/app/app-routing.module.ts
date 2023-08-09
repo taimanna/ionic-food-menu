@@ -38,6 +38,11 @@ const routes: Routes = [
       },
     ],
   },
+  {
+    path: 'detail/:id',
+    loadChildren: () =>
+      import('./pages/detail/detail.module').then((m) => m.DetailPageModule),
+  },
 ];
 
 @NgModule({
