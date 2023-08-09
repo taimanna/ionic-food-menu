@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 export class HomePage {
   menu: any;
   popular: any;
+  public category: string = '';
 
   constructor() {}
 
@@ -18,9 +19,5 @@ export class HomePage {
         this.menu = json;
         this.popular = json.splice(0, 4);
       });
-  }
-
-  onClick() {
-    console.log(this.popular);
   }
 }

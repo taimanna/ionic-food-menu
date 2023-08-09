@@ -12,6 +12,32 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full',
   },
+  {
+    path: '',
+    children: [
+      {
+        path: 'all',
+        loadChildren: () =>
+          import('./pages/category/category.module').then(
+            (m) => m.CategoryPageModule
+          ),
+      },
+      {
+        path: 'fastfood',
+        loadChildren: () =>
+          import('./pages/category/category.module').then(
+            (m) => m.CategoryPageModule
+          ),
+      },
+      {
+        path: 'seafood',
+        loadChildren: () =>
+          import('./pages/category/category.module').then(
+            (m) => m.CategoryPageModule
+          ),
+      },
+    ],
+  },
 ];
 
 @NgModule({

@@ -1,18 +1,7 @@
-
-
 ion-row {
   text-align: center;
 
-  ion-col[size="4"] img {
-    border-radius: 30px;
-    width: 80px;
-    height: 80px;
-    object-fit: cover;
-    background-color: #7226dd;
-  }
-
   ion-col[size="5.5"] {
-    margin: 5px;
     border-radius: 30px;
     background-color: #efefef;
   }
@@ -26,3 +15,6 @@ ion-row {
   }
 }
 
+ion-grid ion-row, ion-col{
+  margin: 5px;
+}
